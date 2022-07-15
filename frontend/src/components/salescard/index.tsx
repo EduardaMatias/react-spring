@@ -17,6 +17,9 @@ function SalesCard() {
   const [sales, setSales] = useState<sale[]>([]);
 
   useEffect(() => {
+
+    console.log(minDate);
+    
     axios.get(`${BASE_URL}/sales`).then((response) => {
       setSales(response.data.content);
     });
